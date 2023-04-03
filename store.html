@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Store Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <style>
+    #page-container{
+        position: relative;
+    }
+    #content-wrap{
+        padding-bottom:2.5rem;
+    }
+    #footer{
+      position:fixed;
+      bottom: 0;
+      width:100%;
+      height:25px;
+      background-color: #413c3c;
+      color:white;
+    }
+    #product{
+      padding:1em; 
+      border:1px solid #413c3c; 
+      margin-right:1em; 
+      border-radius:5px;
+    }
+    #cart-container {
+      border:1px solid #413c3c;
+      border-radius:5px;
+      margin-top:1em;
+      padding:1em;
+    }
+    #carttotals {
+      margin-right:0;
+      margin-left:auto;
+    }
+    #cart-buttons {
+      width:auto;
+      margin-right:0;
+      margin-left:auto;
+      display:flex;
+      justify-content:flex-end;
+      padding:1em 0;
+    }
+  </style>
+
+  <body style="background-color:#F4EECF;font-family:Georgia;">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background:#413c3c">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Christian's Webpage</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="nav-item"><a class="nav-link" href="about me.html">About Me</a></li>
+            <li class="nav-item"><a class="nav-link" href="my work.html">My Work</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="store.html">My Store</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Me</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+    <h1>My Store</h1>
+    <div id="page-container">
+        <div id="content-wrap">
+          <div class="product" id="product">
+            <h5 class="productname">Fork</h3>
+            <img src="fork.jpg" style="width:150px;height:150px;">
+            <p class="price">$2.00</p>
+            <button class="addtocart" onclick="document.location.reload()">Add To Cart</button>
+          </div>
+          <br>
+          <div class="product" id="product">
+            <h5 class="productname">Spoon</h3>
+            <img src="spoon.jpg" style="width:150px;height:150px;">
+            <p class="price">$1.50</p>
+            <button class="addtocart" onclick="document.location.reload()">Add To Cart</button>
+          </div>
+          <br>
+          <div class="product" id="product">
+            <h5 class="productname">Knife</h3>
+            <img src="knife.jpg" style="width:150px;height:150px;">
+            <p class="price">$1.00</p>
+            <button class="addtocart" onclick="document.location.reload()">Add To Cart</button>
+          </div>
+        </div>
+        <div class="cart-container">
+          <h2>Cart</h2>
+          <table>
+            <thead>
+              <tr>
+              <th><strong>Product</strong></th>
+              <th><strong>Price</strong></th>
+            </tr>
+            </thead>
+            <tbody id="carttable">
+            </tbody>
+          </table>
+          <hr>
+          <table id="carttotals">
+            <tr>
+              <td><strong>Items</strong></td>
+              <td><strong>Total</strong></td>
+            </tr>
+            <tr>
+              <td>x <span id="itemsquantity">0</span></td>
+             
+              <td>$<span id="total">0</span></td>
+            </tr></table>
+
+            
+          <div class="cart-buttons">  
+            <button id="emptycart">Empty Cart</button>
+            <button id="checkout" onclick="checkout()">Checkout</button>
+          </div>
+        </div>
+      </main>
+        <br><br>
+        <footer id="footer">
+            <p>Christian Micco's Website</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <script src="store.js"></script> 
+    </div>
+    </body>
+</html>
